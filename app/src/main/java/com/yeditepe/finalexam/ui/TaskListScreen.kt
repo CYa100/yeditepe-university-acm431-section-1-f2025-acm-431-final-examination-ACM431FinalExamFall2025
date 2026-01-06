@@ -33,23 +33,12 @@ fun TaskListScreen(viewModel: TaskViewModel = viewModel()) {
                         .padding(12.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    if (task.imageResId != 0) {
-                        Image(
-                            painter = painterResource(id = task.imageResId),
-                            contentDescription = task.title,
-                            modifier = Modifier
-                                .size(64.dp)
-                                .clip(RoundedCornerShape(8.dp)),
-                            contentScale = ContentScale.Crop
-                        )
-                    } else {
                         Box(
                             modifier = Modifier
                                 .size(64.dp)
                                 .background(Color.LightGray, RoundedCornerShape(8.dp)),
                             contentAlignment = Alignment.Center
                         )
-                    }
 
                     Spacer(modifier = Modifier.width(12.dp))
 
